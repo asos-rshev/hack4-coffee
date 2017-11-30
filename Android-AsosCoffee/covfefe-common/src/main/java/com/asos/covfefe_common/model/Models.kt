@@ -1,14 +1,61 @@
 package com.asos.covfefe_common.model
 
+import android.os.Parcel
+import android.os.Parcelable
+import paperparcel.PaperParcel
 
-data class MenuCategory(var name:String? = null, var type:Int? = null, var items:List<CanteenMenuItem>? = null)
+@PaperParcel
+data class MenuCategory(var name:String? = null, var type:Int? = null, var items:List<CanteenMenuItem>? = null): Parcelable {
+    companion object {
+        @JvmField val CREATOR = PaperParcelMenuCategory.CREATOR
+    }
 
+    override fun describeContents() = 0
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        PaperParcelMenuCategory.writeToParcel(this, dest, flags)
+    }
+}
+
+@PaperParcel
 data class CanteenMenuItem(var name:String? = null,
                            var type:Int? = null,
                            var milky:Boolean = false,
                            var sizes:List<CanteenMenuItemSize>? = null,
-                           var extras:List<CanteenMenuItemExtra>? = null)
+                           var extras:List<CanteenMenuItemExtra>? = null) : Parcelable {
+    companion object {
+        @JvmField val CREATOR = PaperParcelCanteenMenuItem.CREATOR
+    }
 
-data class CanteenMenuItemSize(var name:String? = null, var price:Double? = null)
+    override fun describeContents() = 0
 
-data class CanteenMenuItemExtra(var name:String? = null, var price:Double? = null)
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        PaperParcelCanteenMenuItem.writeToParcel(this, dest, flags)
+    }
+}
+
+@PaperParcel
+data class CanteenMenuItemSize(var name:String? = null, var price:Double? = null) : Parcelable {
+    companion object {
+        @JvmField val CREATOR = PaperParcelCanteenMenuItemSize.CREATOR
+    }
+
+    override fun describeContents() = 0
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        PaperParcelCanteenMenuItemSize.writeToParcel(this, dest, flags)
+    }
+}
+
+@PaperParcel
+data class CanteenMenuItemExtra(var name:String? = null, var price:Double? = null) : Parcelable {
+    companion object {
+        @JvmField val CREATOR = PaperParcelCanteenMenuItemExtra.CREATOR
+    }
+
+    override fun describeContents() = 0
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        PaperParcelCanteenMenuItemExtra.writeToParcel(this, dest, flags)
+    }
+}

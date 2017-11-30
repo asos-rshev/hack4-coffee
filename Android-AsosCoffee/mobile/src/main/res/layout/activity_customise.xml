@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context="com.asos.coffee.CustomiseActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#f8f8f8"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="180dp">
+        <ImageView
+            android:id="@+id/customizeHeroIcon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_latte_hero"
+            android:padding="16dp"/>
+        <TextView
+            android:id="@+id/customizeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Latte"/>
+        <TextView
+            android:id="@+id/customizeSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="small, soya milk, espresso shot"/>
 
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/customiseProceedButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:paddingTop="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="0dp"
+        android:background="@color/colorAccent"
+        android:text="PROCEED (total: £1.25)"
+        />
+</LinearLayout>

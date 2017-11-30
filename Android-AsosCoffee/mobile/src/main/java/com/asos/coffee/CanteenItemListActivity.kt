@@ -17,8 +17,8 @@ import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_canteen_item_list.*
 import kotlinx.android.synthetic.main.canteen_item.view.*
 
-const val EXTRA_ITEM_INDEX:String = "EXTRA_ITEM_INDEX"
-const val EXTRA_ITEM_TITLE:String = "EXTRA_ITEM_TITLE"
+private const val EXTRA_ITEM_INDEX:String = "EXTRA_ITEM_INDEX"
+private const val EXTRA_ITEM_TITLE:String = "EXTRA_ITEM_TITLE"
 
 class CanteenItemListActivity : AppCompatActivity() {
 
@@ -26,9 +26,6 @@ class CanteenItemListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        toolbar.setLogo(R.mipmap.ic_launcher_round)
-//        setSupportActionBar(toolbar)
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(R.layout.activity_canteen_item_list)
         configureList(intent.getIntExtra(EXTRA_ITEM_INDEX, -1))
         itemsListTitle.text = getString(R.string.item_list_title_format, intent.getStringExtra(EXTRA_ITEM_TITLE))
@@ -53,7 +50,7 @@ class CanteenItemListActivity : AppCompatActivity() {
 
             override fun onBindViewHolder(holder: CanteenMenuItemHolder, position: Int, model: CanteenMenuItem) {
                 holder.bind(model, View.OnClickListener {
-
+                    startActivity(CustomiseActivity.newIntent(context = this@CanteenItemListActivity, item = model))
                 })
             }
         }
