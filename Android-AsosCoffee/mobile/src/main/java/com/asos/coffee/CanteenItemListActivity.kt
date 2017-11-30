@@ -55,7 +55,9 @@ class CanteenItemListActivity : AppCompatActivity() {
             }
         }
 
-        itemListRecyclerView.layoutManager = GridLayoutManager(this, 2)
+
+        val columns:Int = getResources().getInteger(R.integer.gallery_columns);
+        itemListRecyclerView.layoutManager = GridLayoutManager(this, columns)
         itemListRecyclerView.adapter = adapter
 
     }
