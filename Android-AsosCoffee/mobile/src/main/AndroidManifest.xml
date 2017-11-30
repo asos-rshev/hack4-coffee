@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CanteenItemListActivity"></activity>
+        <activity android:name=".CanteenItemListActivity" />
+        <activity android:name=".CustomiseActivity"></activity>
     </application>
 
 </manifest>

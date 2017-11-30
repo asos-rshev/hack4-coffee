@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.asos.covfefe_common.mapper.CanteenItemTypeToIconMapper
 import com.asos.covfefe_common.model.CanteenMenuItem
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
@@ -25,6 +26,9 @@ class CanteenItemListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        toolbar.setLogo(R.mipmap.ic_launcher_round)
+//        setSupportActionBar(toolbar)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setContentView(R.layout.activity_canteen_item_list)
         configureList(intent.getIntExtra(EXTRA_ITEM_INDEX, -1))
         itemsListTitle.text = getString(R.string.item_list_title_format, intent.getStringExtra(EXTRA_ITEM_TITLE))
@@ -80,9 +84,12 @@ class CanteenItemListActivity : AppCompatActivity() {
 }
 
 class CanteenMenuItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    private val canteenItemTypeToIconMapper = CanteenItemTypeToIconMapper()
+
     fun bind(item: CanteenMenuItem, clickAction: View.OnClickListener) {
+        itemView.itemIcon.setImageResource(canteenItemTypeToIconMapper.iconForType(item.type))
         itemView.itemTitle.text = item.name
-        itemView.itemPrice.text = item.sizes.joinToString(separator = " ") { "£${it.price}" }
+        itemView.itemPrice.text = item.sizes.joinToString(separator = "  ") { "£${it.price}" }
         itemView.setOnClickListener(clickAction)
     }
 }

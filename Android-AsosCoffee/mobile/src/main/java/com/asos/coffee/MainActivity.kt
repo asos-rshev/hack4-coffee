@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.*
+import com.asos.covfefe_common.mapper.CategoryTypeToIconMapper
 import com.asos.covfefe_common.model.MenuCategory
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         // Init Recycler View from Firebase db
         configureList()
 
+        toolbar.setLogo(R.mipmap.ic_launcher_round)
         // Choose authentication providers
         val providers = listOf(
                 AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
@@ -124,7 +126,9 @@ class MainActivity : AppCompatActivity() {
 }
 
 class MenuCategoryHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    private val categoryTypeToIconMapper = CategoryTypeToIconMapper()
     fun bind(category: MenuCategory, clickAction:View.OnClickListener) {
+        itemView.menuCategoryIcon.setImageResource(categoryTypeToIconMapper.iconForType(category.type))
         itemView.menuCategoryTitle.text = category.name
         itemView.setOnClickListener(clickAction)
     }
