@@ -33,13 +33,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE CANTEEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-Q1-OGj">
-                                <rect key="frame" x="100" y="276.5" width="175.5" height="35"/>
+                                <rect key="frame" x="92.5" y="276.5" width="190.5" height="33"/>
                                 <fontDescription key="fontDescription" name="FuturaPTHeavy-Reg" family="Futura PT" pointSize="28"/>
                                 <color key="textColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-ri-uR9">
-                                <rect key="frame" x="169" y="352" width="37" height="37"/>
+                                <rect key="frame" x="169" y="350" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
