@@ -22,8 +22,16 @@
         <item name="android:textColorSecondary">@color/colorAccent</item>
         <item name="actionMenuTextColor">@color/colorAccent</item>
         <item name="android:textAllCaps">true</item>
-        <!--<item name="actionOverflowButtonStyle">@style/ActionButtonOverflowStyle</item>-->
-        <!--<item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
     </style>
 
 </resources>

@@ -5,15 +5,15 @@ import android.os.Parcelable
 import paperparcel.PaperParcel
 
 @PaperParcel
-data class MenuCategory(var name:String? = null, var type:Int? = null, var items:List<CanteenMenuItem>? = null): Parcelable {
+data class CanteenMenuCategory(var name:String? = null, var type:Int? = null, var items:List<CanteenMenuItem>? = null): Parcelable {
     companion object {
-        @JvmField val CREATOR = PaperParcelMenuCategory.CREATOR
+        @JvmField val CREATOR = PaperParcelCanteenMenuCategory.CREATOR
     }
 
     override fun describeContents() = 0
 
     override fun writeToParcel(dest: Parcel, flags: Int) {
-        PaperParcelMenuCategory.writeToParcel(this, dest, flags)
+        PaperParcelCanteenMenuCategory.writeToParcel(this, dest, flags)
     }
 }
 
