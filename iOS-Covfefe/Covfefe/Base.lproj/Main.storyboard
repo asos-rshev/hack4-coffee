@@ -1,15 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uex-OX-2qC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FTN75.otf">
+            <string>FuturaPTHeavy-Reg</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="Lhe-pF-5gN">
+            <objects>
+                <viewController id="Uex-OX-2qC" customClass="LaunchViewController" customModule="Covfefe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d2C-AE-NZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dH-UcL">
+                                <rect key="frame" x="163" y="216.5" width="48" height="48"/>
+                                <color key="tintColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="CQy-Q5-1kL"/>
+                                    <constraint firstAttribute="height" constant="48" id="Muy-0B-mgs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE CANTEEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-Q1-OGj">
+                                <rect key="frame" x="100" y="276.5" width="175.5" height="35"/>
+                                <fontDescription key="fontDescription" name="FuturaPTHeavy-Reg" family="Futura PT" pointSize="28"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-ri-uR9">
+                                <rect key="frame" x="169" y="352" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HhD-dH-UcL" firstAttribute="centerX" secondItem="9ze-ha-M9H" secondAttribute="centerX" id="CIY-SY-s86"/>
+                            <constraint firstItem="xrS-Q1-OGj" firstAttribute="top" secondItem="HhD-dH-UcL" secondAttribute="bottom" constant="12" id="Ki6-jS-EI8"/>
+                            <constraint firstItem="HhD-dH-UcL" firstAttribute="centerY" secondItem="9ze-ha-M9H" secondAttribute="centerY" multiplier="0.7" id="VjP-HB-ySE"/>
+                            <constraint firstItem="Ffa-ri-uR9" firstAttribute="centerX" secondItem="xrS-Q1-OGj" secondAttribute="centerX" id="ecx-1t-mbJ"/>
+                            <constraint firstItem="xrS-Q1-OGj" firstAttribute="centerX" secondItem="HhD-dH-UcL" secondAttribute="centerX" id="htm-Xo-IKg"/>
+                            <constraint firstItem="Ffa-ri-uR9" firstAttribute="top" secondItem="xrS-Q1-OGj" secondAttribute="bottom" constant="40" id="wnh-xI-tJh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9ze-ha-M9H"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinnerView" destination="Ffa-ri-uR9" id="ogl-EX-p66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwJ-Ww-3kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-606" y="133"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Covfefe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,4 +76,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="IconTemplate" width="83" height="83"/>
+    </resources>
 </document>
