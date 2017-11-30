@@ -23,7 +23,6 @@ allprojects {
     }
     ext.app_compat_version = "26.1.0"
     ext.gms_version = "11.4.2"
-    ext.firebase_ui_auth_version = "3.1.0"
 }
 
 task clean(type: Delete) {
