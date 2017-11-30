@@ -6,6 +6,7 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.asos.coffee.CovfefeApplication.Companion.TAG
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
@@ -59,31 +60,20 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-//        mVisible = true
-
-//        // Set up the user interaction to manually show or hide the system UI.
-//        fullscreen_content.setOnClickListener { toggle() }
-
-//        // Upon interacting with UI controls, delay any scheduled hide()
-//        // operations to prevent the jarring behavior of controls going away
-//        // while interacting with the UI.
-//        dummy_button.setOnTouchListener(mDelayHideTouchListener)
-
         authenticate()
     }
 
-//    override fun onPostCreate(savedInstanceState: Bundle?) {
-//        super.onPostCreate(savedInstanceState)
-//
-//        // Trigger the initial hide() shortly after the activity has been
-//        // created, to briefly hint to the user that UI controls
-//        // are available.
-//        delayedHide(100)
-//    }
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+
+        // Trigger the initial hide() shortly after the activity has been
+        // created, to briefly hint to the user that UI controls
+        // are available.
+        delayedHide(100)
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
-
         if (requestCode == RC_SIGN_IN) {
             val response = IdpResponse.fromResultIntent(data)
 
@@ -91,12 +81,13 @@ class SplashActivity : AppCompatActivity() {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
                 Log.i(TAG, "User $user logged in! ")
-                startActivity( MainActivity.newIntent(this))
-                finish()
+                startActivity(MainActivity.newIntent(this))
             } else {
                 // Sign in failed, check response for error code
                 Log.e(TAG, "Log In Failure $response")
+                Toast.makeText(this, "Login failure", Toast.LENGTH_LONG).show()
             }
+            finish()
         }
     }
 
