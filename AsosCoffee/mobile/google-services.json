@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "382378711041",
+    "firebase_url": "https://asoscoffee.firebaseio.com",
+    "project_id": "asoscoffee",
+    "storage_bucket": "asoscoffee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382378711041:android:be86f11d98eb0565",
+        "android_client_info": {
+          "package_name": "com.asos.coffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382378711041-q9o3q69kt9oo9jpcp37bu2kjaqcdmrji.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asos.coffee",
+            "certificate_hash": "bbdcafc4631a27f9ece9ce3860a7046f0e983117"
+          }
+        },
+        {
+          "client_id": "382378711041-0auv3mff8onacsqo85ps21u0a0ch2p66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6XbLRsE6A3oxtgXtOSMKAxXHBsuCgmcs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382378711041-0auv3mff8onacsqo85ps21u0a0ch2p66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
