@@ -35,6 +35,8 @@
 		9B2C9FC41FD0199200E96C12 /* CovfefeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FC31FD0199200E96C12 /* CovfefeTests.swift */; };
 		9B2C9FCF1FD02A5600E96C12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */; };
 		9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FD01FD037B900E96C12 /* Style.swift */; };
+		9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */; };
+		9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		9B2C9FC51FD0199200E96C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B2C9FD01FD037B900E96C12 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		B4130C45C2C0BC29F8605E01 /* Pods-CovfefeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovfefeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CovfefeTests/Pods-CovfefeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBAD528F5952A342EEC24E8F /* Pods-Covfefe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covfefe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe.debug.xcconfig"; sourceTree = "<group>"; };
 		CE25EB47CCE6D367B4800D07 /* Pods_CovfefeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovfefeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,8 @@
 				9B2C9FB01FD0199200E96C12 /* ViewController.swift */,
 				9B2C9FD01FD037B900E96C12 /* Style.swift */,
 				9B2C9FB21FD0199200E96C12 /* Main.storyboard */,
+				9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */,
+				9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */,
 				9B2774381FD0445700C25FE8 /* LaunchViewController.swift */,
 				9B2C9FB51FD0199200E96C12 /* Assets.xcassets */,
 				9B2C9FB71FD0199200E96C12 /* LaunchScreen.storyboard */,
@@ -443,7 +449,9 @@
 				9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */,
 				9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */,
 				9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */,
+				9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */,
 				9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */,
+				9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */,
 				9B2774391FD0445700C25FE8 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
