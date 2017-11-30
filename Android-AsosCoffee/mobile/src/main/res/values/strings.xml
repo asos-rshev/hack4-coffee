@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Asos Covfefe</string>
+    <string name="app_name">The Canteen</string>
+    <string name="item_list_title_format">"CHOOSE YOUR %1$s"</string>
     <string name="action_settings">Settings</string>
 </resources>
