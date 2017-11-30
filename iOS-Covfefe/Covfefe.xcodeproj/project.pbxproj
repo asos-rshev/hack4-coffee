@@ -28,7 +28,6 @@
 		9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27743A1FD04DF500C25FE8 /* Singleton.swift */; };
 		9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */; };
 		9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */; };
-		9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB01FD0199200E96C12 /* ViewController.swift */; };
 		9B2C9FB41FD0199200E96C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB21FD0199200E96C12 /* Main.storyboard */; };
 		9B2C9FB61FD0199200E96C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB51FD0199200E96C12 /* Assets.xcassets */; };
 		9B2C9FB91FD0199200E96C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB71FD0199200E96C12 /* LaunchScreen.storyboard */; };
@@ -37,6 +36,8 @@
 		9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FD01FD037B900E96C12 /* Style.swift */; };
 		9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */; };
 		9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */; };
+		9BFB315E1FD07E6E00EEA552 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */; };
+		9BFB31601FD07F5000EEA552 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315F1FD07F5000EEA552 /* ItemsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,6 @@
 		9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		9B2C9FAB1FD0199200E96C12 /* Covfefe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covfefe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B2C9FB01FD0199200E96C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B2C9FB31FD0199200E96C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B2C9FB51FD0199200E96C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B2C9FB81FD0199200E96C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +84,8 @@
 		9B2C9FD01FD037B900E96C12 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
+		9BFB315F1FD07F5000EEA552 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
 		B4130C45C2C0BC29F8605E01 /* Pods-CovfefeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovfefeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CovfefeTests/Pods-CovfefeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBAD528F5952A342EEC24E8F /* Pods-Covfefe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covfefe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe.debug.xcconfig"; sourceTree = "<group>"; };
 		CE25EB47CCE6D367B4800D07 /* Pods_CovfefeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovfefeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,12 +161,13 @@
 				9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */,
 				9B27743A1FD04DF500C25FE8 /* Singleton.swift */,
 				9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */,
-				9B2C9FB01FD0199200E96C12 /* ViewController.swift */,
 				9B2C9FD01FD037B900E96C12 /* Style.swift */,
+				9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */,
 				9B2C9FB21FD0199200E96C12 /* Main.storyboard */,
+				9B2774381FD0445700C25FE8 /* LaunchViewController.swift */,
 				9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */,
 				9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */,
-				9B2774381FD0445700C25FE8 /* LaunchViewController.swift */,
+				9BFB315F1FD07F5000EEA552 /* ItemsListViewController.swift */,
 				9B2C9FB51FD0199200E96C12 /* Assets.xcassets */,
 				9B2C9FB71FD0199200E96C12 /* LaunchScreen.storyboard */,
 				9B2C9FBA1FD0199200E96C12 /* Info.plist */,
@@ -446,10 +449,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */,
-				9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */,
 				9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */,
+				9BFB315E1FD07E6E00EEA552 /* Storyboard+Extensions.swift in Sources */,
 				9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */,
 				9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */,
+				9BFB31601FD07F5000EEA552 /* ItemsListViewController.swift in Sources */,
 				9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */,
 				9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */,
 				9B2774391FD0445700C25FE8 /* LaunchViewController.swift in Sources */,

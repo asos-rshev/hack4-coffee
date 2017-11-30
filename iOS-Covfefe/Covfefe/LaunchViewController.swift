@@ -52,7 +52,7 @@ final class LaunchViewController: UIViewController {
         Singleton.shared.databaseModel.refreshFromRemote { [weak self] (success) in
             guard
                 success,
-                let mainNavVC = self?.storyboard?.instantiateViewController(withIdentifier: "MainNavigationController")
+                let mainNavVC = self?.storyboard?._mainNavigation
             else {
                 print("FAILED TO PARSE!!!")
                 return
