@@ -25,6 +25,8 @@
 		9B27742B1FD03A2400C25FE8 /* FTN65.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27741C1FD03A2400C25FE8 /* FTN65.otf */; };
 		9B27742C1FD03A2400C25FE8 /* FuturaStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27741D1FD03A2400C25FE8 /* FuturaStd.otf */; };
 		9B2774391FD0445700C25FE8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2774381FD0445700C25FE8 /* LaunchViewController.swift */; };
+		9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27743A1FD04DF500C25FE8 /* Singleton.swift */; };
+		9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */; };
 		9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */; };
 		9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB01FD0199200E96C12 /* ViewController.swift */; };
 		9B2C9FB41FD0199200E96C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB21FD0199200E96C12 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		9B27741C1FD03A2400C25FE8 /* FTN65.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN65.otf; sourceTree = "<group>"; };
 		9B27741D1FD03A2400C25FE8 /* FuturaStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaStd.otf; sourceTree = "<group>"; };
 		9B2774381FD0445700C25FE8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		9B27743A1FD04DF500C25FE8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		9B2C9FAB1FD0199200E96C12 /* Covfefe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covfefe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B2C9FB01FD0199200E96C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */,
+				9B27743A1FD04DF500C25FE8 /* Singleton.swift */,
+				9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */,
 				9B2C9FB01FD0199200E96C12 /* ViewController.swift */,
 				9B2C9FD01FD037B900E96C12 /* Style.swift */,
 				9B2C9FB21FD0199200E96C12 /* Main.storyboard */,
@@ -333,9 +339,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,14 +360,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,9 +439,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */,
 				9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */,
 				9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */,
 				9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */,
+				9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */,
 				9B2774391FD0445700C25FE8 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
