@@ -1,14 +1,14 @@
 package com.asos.covfefe_common.model
 
 
-//data class MenuCategory(val name:String? = null, val type:Int? = null, val items:List<CanteenMenuItem>? = null)
+data class MenuCategory(var name:String? = null, var type:Int? = null, var items:List<CanteenMenuItem>? = null)
 
-//data class CanteenMenuItem(val name:String,
-//                           val type:Int,
-//                           val milky:Boolean = false,
-//                           val sizes:List<CanteenMenuItemSize>,
-//                           val extras:List<CanteenMenuItemExtra>)
-//
-//data class CanteenMenuItemSize(val name:String, val price:Double)
-//
-//data class CanteenMenuItemExtra(val name:String, val price:Double)
+data class CanteenMenuItem(var name:String? = null,
+                           var type:Int? = null,
+                           var milky:Boolean = false,
+                           var sizes:List<CanteenMenuItemSize>? = null,
+                           var extras:List<CanteenMenuItemExtra>? = null)
+
+data class CanteenMenuItemSize(var name:String? = null, var price:Double? = null)
+
+data class CanteenMenuItemExtra(var name:String? = null, var price:Double? = null)

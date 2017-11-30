@@ -75,7 +75,7 @@ class CanteenItemListActivity : AppCompatActivity() {
 
     companion object {
         @JvmStatic
-        fun newIntent(context: Context, categoryIndex: Int, categoryTitle: String): Intent =
+        fun newIntent(context: Context, categoryIndex: Int, categoryTitle: String?): Intent =
             Intent(context, CanteenItemListActivity::class.java).apply {
                 putExtra(EXTRA_ITEM_INDEX, categoryIndex)
                 putExtra(EXTRA_ITEM_TITLE, categoryTitle)
@@ -89,7 +89,7 @@ class CanteenMenuItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) 
     fun bind(item: CanteenMenuItem, clickAction: View.OnClickListener) {
         itemView.itemIcon.setImageResource(canteenItemTypeToIconMapper.iconForType(item.type))
         itemView.itemTitle.text = item.name
-        itemView.itemPrice.text = item.sizes.joinToString(separator = "  ") { "£${it.price}" }
+        itemView.itemPrice.text = item.sizes?.joinToString(separator = "  ") { "£${it.price}" }
         itemView.setOnClickListener(clickAction)
     }
 }
