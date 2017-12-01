@@ -131,6 +131,7 @@ class CustomiseActivity : AppCompatActivity() {
         customiseProceedButton.text = getString(R.string.proceed_button_label_format, totalPrice)
         val summary = StringBuilder(selectedSize?.name)
         selectedExtra?.let { summary.append(", ${it.name}") }
+        selectedMilk?.let { summary.append(", ${it.name}") }
         customizeSummary.text = summary.toString().toLowerCase()
     }
 
