@@ -10,12 +10,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.asos.covfefe_common.mapper.CanteenItemSizeNameToIconMapper
-import com.asos.covfefe_common.model.CanteenMenuItem
-import com.asos.covfefe_common.model.CanteenMenuItemExtra
-import com.asos.covfefe_common.model.CanteenMenuItemSize
+import com.asos.covfefe_common.model.*
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_customise.*
 import kotlinx.android.synthetic.main.extras_item.view.*
 import kotlinx.android.synthetic.main.size_item.view.*
+
 
 private const val EXTRA_ITEM: String = "EXTRA_ITEM"
 
@@ -35,10 +35,58 @@ class CustomiseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_customise)
         customizeTitle.text = item.name
 
-        sizesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        extrasRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        milkRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        setupSizeList()
+        setupMilkList()
+        setupExtrasList()
 
+        updateFromSelection()
+
+        customiseProceedButton.setOnClickListener {
+            // Create Order for now but TODO: and move to bag in the future...
+            val orderNumber = System.currentTimeMillis()
+            val database = FirebaseDatabase.getInstance()
+            val ref = database.getReference("orders/$orderNumber")
+
+            val order:Order = Order().apply {
+                id = orderNumber
+                inProgress = 0
+                name = "Olivier"
+                totalPrice = calculateTotalPrice()
+                items = listOf(
+                        Item().apply {
+                            count = 1
+                            extras = selectedExtra?.let { mutableListOf(it.name) }?: mutableListOf()
+                            milky = item.milky
+                            name = item.name
+                            size = selectedSize?.name
+                            type = 0
+                            unitPrice = totalPrice
+                        }
+                )
+            }
+            ref.setValue(order)
+        }
+    }
+
+    private fun setupExtrasList() {
+        extrasRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val extrasAdapter = ExtrasAdapter(item.extras ?: emptyList()) {
+            selectedExtra = it
+            updateFromSelection()
+        }
+        extrasAdapter.selectedExtra = null
+        extrasRecyclerView.adapter = extrasAdapter
+    }
+
+    private fun setupMilkList() {
+        if (item.milky) {
+            milkRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            // TODO: MilkAdapter
+        }
+    }
+
+    private fun setupSizeList() {
+        sizesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val sizesAdapter = SizesAdapter(item.sizes ?: emptyList()) {
             selectedSize = it
             updateFromSelection()
@@ -48,28 +96,21 @@ class CustomiseActivity : AppCompatActivity() {
             sizesAdapter.selectedSize = selectedSize
         }
         sizesRecyclerView.adapter = sizesAdapter
-
-        if (item.milky) {
-            // TODO: MilkAdapter
-        }
-
-        val extrasAdapter = ExtrasAdapter(item.extras ?: emptyList()) {
-            selectedExtra = it
-            updateFromSelection()
-        }
-        extrasAdapter.selectedExtra = null
-        extrasRecyclerView.adapter = extrasAdapter
-
-        updateFromSelection()
     }
 
     private fun updateFromSelection() {
-        val sizePrice: Double = selectedSize?.price ?: 0.0
-        val extraPrice: Double = selectedExtra?.price ?: 0.0
-        customiseProceedButton.text = getString(R.string.proceed_button_label_format, sizePrice + extraPrice)
+        val totalPrice = calculateTotalPrice()
+        customiseProceedButton.text = getString(R.string.proceed_button_label_format, totalPrice)
         val summary = StringBuilder(selectedSize?.name)
         selectedExtra?.let { summary.append(", ${it.name}") }
         customizeSummary.text = summary.toString().toLowerCase()
+    }
+
+    private fun calculateTotalPrice(): Double {
+        val sizePrice: Double = selectedSize?.price ?: 0.0
+        val extraPrice: Double = selectedExtra?.price ?: 0.0
+        val totalPrice = sizePrice + extraPrice
+        return totalPrice
     }
 
     companion object {
