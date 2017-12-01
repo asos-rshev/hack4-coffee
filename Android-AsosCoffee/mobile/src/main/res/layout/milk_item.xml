@@ -9,7 +9,7 @@
     android:layout_height="100dp">
 
     <View
-        android:id="@+id/itemSizeSelectedBg"
+        android:id="@+id/itemMilkSelectedBg"
         android:visibility="gone"
         android:padding="0dp"
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
        android:background="@drawable/circular_selection" />
 
     <ImageView
-        android:id="@+id/itemSizeIcon"
+        android:id="@+id/itemMilkIcon"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginBottom="2dp"
@@ -30,20 +30,20 @@
         app:srcCompat="@drawable/ic_latte_hero" />
 
     <TextView
-        android:id="@+id/itemSizeTitle"
+        android:id="@+id/itemMilkTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
-        android:layout_below="@id/itemSizeIcon"
+        android:layout_below="@id/itemMilkIcon"
         android:layout_centerHorizontal="true"
         tools:text="Small"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         android:textAllCaps="true"/>
     <TextView
-        android:id="@+id/itemSizePrice"
+        android:id="@+id/itemMilkPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -51,7 +51,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="0dp"
         android:gravity="center"
-        android:layout_below="@id/itemSizeTitle"
+        android:layout_below="@id/itemMilkTitle"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         tools:text="£1.5"
