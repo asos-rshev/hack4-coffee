@@ -11,6 +11,7 @@ class CanteenItemTypeToIconMapper {
         else -> R.drawable.ic_food
     }
 }
+
 class CanteenItemSizeNameToIconMapper {
     @DrawableRes
     fun iconForSize(sizeName:String?):Int = when(sizeName?.toLowerCase()) {
@@ -19,6 +20,16 @@ class CanteenItemSizeNameToIconMapper {
         "large" -> R.drawable.ic_latte_large
         "" -> R.drawable.ic_food
         else -> R.drawable.ic_drinks
+    }
+}
+
+class CanteenItemMilkNameToIconMapper {
+    @DrawableRes
+    fun iconForSize(milkName:String?):Int = when(milkName?.toLowerCase()) {
+        "cow" -> R.drawable.ic_cow_milk
+        "soy" -> R.drawable.ic_soy_milk
+        "almond" -> R.drawable.ic_almond_milk
+        else -> R.drawable.ic_cow_milk
     }
 }
 

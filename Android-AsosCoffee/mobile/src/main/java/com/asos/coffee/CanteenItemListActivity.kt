@@ -56,7 +56,7 @@ class CanteenItemListActivity : AppCompatActivity() {
         }
 
 
-        val columns:Int = getResources().getInteger(R.integer.gallery_columns);
+        val columns:Int = getResources().getInteger(R.integer.gallery_columns)
         itemListRecyclerView.layoutManager = GridLayoutManager(this, columns)
         itemListRecyclerView.adapter = adapter
 
@@ -69,7 +69,7 @@ class CanteenItemListActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        adapter.startListening()
+        adapter.stopListening()
     }
 
     companion object {

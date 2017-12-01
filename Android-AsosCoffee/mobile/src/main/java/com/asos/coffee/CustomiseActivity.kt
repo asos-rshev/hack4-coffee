@@ -9,12 +9,16 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.asos.covfefe_common.mapper.CanteenItemMilkNameToIconMapper
 import com.asos.covfefe_common.mapper.CanteenItemSizeNameToIconMapper
 import com.asos.covfefe_common.model.*
+import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_customise.*
 import kotlinx.android.synthetic.main.extras_item.view.*
+import kotlinx.android.synthetic.main.milk_item.view.*
 import kotlinx.android.synthetic.main.size_item.view.*
 
 
@@ -29,7 +33,7 @@ class CustomiseActivity : AppCompatActivity() {
 
     private var selectedSize: CanteenMenuItemSize? = null
     private var selectedExtra: CanteenMenuItemExtra? = null
-//    private var selectedMilk: CanteenMenuItemMilk? = null
+    private var selectedMilk: CanteenMenuItemMilk? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,12 +64,26 @@ class CustomiseActivity : AppCompatActivity() {
                             milky = item.milky
                             name = item.name
                             size = selectedSize?.name
-                            type = 0
+                            type = selectedMilk?.type?:0
                             unitPrice = calculateTotalPrice()
                         }
                 )
             }
             ref.setValue(order)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (item.milky) {
+            (milkRecyclerView?.adapter as MilkAdapter)?.startListening()
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (item.milky) {
+            (milkRecyclerView?.adapter as MilkAdapter)?.stopListening()
         }
     }
 
@@ -82,7 +100,17 @@ class CustomiseActivity : AppCompatActivity() {
     private fun setupMilkList() {
         if (item.milky) {
             milkRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-            // TODO: MilkAdapter
+            val database = FirebaseDatabase.getInstance()
+            val query = database.reference.child("milks")
+            val options = FirebaseRecyclerOptions.Builder<CanteenMenuItemMilk>()
+                    .setQuery(query, CanteenMenuItemMilk::class.java)
+                    .build()
+            val milkAdapter = MilkAdapter(options) {
+                selectedMilk = it
+                updateFromSelection()
+            }
+//            milkAdapter.selectedMilk =
+            milkRecyclerView.adapter = milkAdapter
         }
     }
 
@@ -145,6 +173,25 @@ class SizesAdapter(val items: List<CanteenMenuItemSize>, val buttonUpdater: (Can
     }
 }
 
+class MilkAdapter(private var options:FirebaseRecyclerOptions<CanteenMenuItemMilk>, private val buttonUpdater: (CanteenMenuItemMilk?) -> Unit) :FirebaseRecyclerAdapter<CanteenMenuItemMilk, MilkViewHolder>(options) {
+
+    var selectedMilk: CanteenMenuItemMilk? = if (itemCount > 0) getItem(0) else null
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MilkViewHolder {
+        val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.milk_item, parent, false)
+        return MilkViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: MilkViewHolder?, position: Int, model: CanteenMenuItemMilk) {
+        holder?.bind(model, selectedMilk == model, View.OnClickListener {
+            selectedMilk = model
+            buttonUpdater.invoke(model)
+            notifyDataSetChanged()
+        })
+    }
+}
+
 class ExtrasAdapter(private val items: List<CanteenMenuItemExtra>, private val buttonUpdater: (CanteenMenuItemExtra?) -> Unit) : RecyclerView.Adapter<ExtrasViewHolder>() {
 
     var selectedExtra: CanteenMenuItemExtra? = null
@@ -188,14 +235,13 @@ class ExtrasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
 }
 
-//class MilkViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//    private val canteenItemSizeNameToIconMapper = CanteenItemSizeNameToIconMapper()
-//
-//    fun bind(milk: CanteenMenuItemMilk, selected: Boolean, clickAction: View.OnClickListener) {
-//        itemView.itemMilkIcon.setImageResource(canteenItemSizeNameToIconMapper.iconForSize(milk.name))
-//        itemView.itemMilkTitle.text = milk.name
-//        itemView.itemMilkPrice.text = "£${milk.price}"
-//        itemView.itemMilkSelectedBg?.visibility = if (selected) View.VISIBLE else View.GONE
-//        itemView.setOnClickListener(clickAction)
-//    }
-//}
+class MilkViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    private val canteenItemMilkNameToIconMapper = CanteenItemMilkNameToIconMapper()
+
+    fun bind(milk: CanteenMenuItemMilk, selected: Boolean, clickAction: View.OnClickListener) {
+        itemView.itemMilkIcon.setImageResource(canteenItemMilkNameToIconMapper.iconForSize(milk.name))
+        itemView.itemMilkTitle.text = milk.name
+        itemView.itemMilkSelectedBg?.visibility = if (selected) View.VISIBLE else View.GONE
+        itemView.setOnClickListener(clickAction)
+    }
+}

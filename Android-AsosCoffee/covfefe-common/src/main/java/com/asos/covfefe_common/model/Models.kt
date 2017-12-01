@@ -64,6 +64,20 @@ data class CanteenMenuItemExtra(var name: String? = null, var price: Double? = n
     }
 }
 
+@PaperParcel
+data class CanteenMenuItemMilk(var name: String? = null, var type: Int? = null) : Parcelable {
+    companion object {
+        @JvmField
+        val CREATOR = PaperParcelCanteenMenuItemMilk.CREATOR
+    }
+
+    override fun describeContents() = 0
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        PaperParcelCanteenMenuItemMilk.writeToParcel(this, dest, flags)
+    }
+}
+
 
 @PaperParcel
 data class Order(var id: Long? = null,
