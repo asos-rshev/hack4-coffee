@@ -50,12 +50,15 @@ final class LaunchViewController: UIViewController {
 
     private func requestDatabase() {
         Singleton.shared.databaseModel.refreshFromRemote { [weak self] (success) in
-            guard success else {
+            guard
+                success,
+                let mainNavVC = self?.storyboard?._mainNavigation
+            else {
                 print("FAILED TO PARSE!!!")
                 return
             }
 
-            // TODO
+            self?.present(mainNavVC, animated: true, completion: nil)
         }
     }
 }
