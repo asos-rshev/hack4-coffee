@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.asos.covfefe_common.mapper.CanteenItemSizeNameToIconMapper
 import com.asos.covfefe_common.model.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_customise.*
 import kotlinx.android.synthetic.main.extras_item.view.*
@@ -50,7 +51,7 @@ class CustomiseActivity : AppCompatActivity() {
             val order:Order = Order().apply {
                 id = orderNumber
                 inProgress = 0
-                name = "Olivier"
+                name = FirebaseAuth.getInstance().currentUser?.displayName?:"Unknown"
                 totalPrice = calculateTotalPrice()
                 items = listOf(
                         Item().apply {
