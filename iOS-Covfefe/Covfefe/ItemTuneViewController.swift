@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseAuthUI
 
 class ItemTuneViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -19,7 +21,8 @@ class ItemTuneViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var variantLabel: UILabel!
     @IBOutlet var proceedButton: UIButton!
-
+    @IBOutlet var spinnerView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,31 @@ class ItemTuneViewController: UIViewController, UICollectionViewDataSource, UICo
     }
 
     @IBAction func didTapProceedButton() {
+        proceedButton.isEnabled = false
+        proceedButton.setTitle("", for: .disabled)
+        spinnerView.startAnimating()
+
+        let id = Int(Date().timeIntervalSince1970 * 1000)
+        let dictionary: NSDictionary = [
+            "id": id,
+            "inProgress": 0,
+            "items": [[
+                "count": 1,
+                "milky": item.milky,
+                "name": item.name,
+                "ready": false,
+                "size": variant!.name,
+                "type": item.type,
+                "unitPrice": variant!.price
+            ]],
+            "name": FUIAuth.defaultAuthUI()!.auth!.currentUser!.displayName!,
+            "totalPrice": variant!.price
+        ]
+
+        Singleton.shared.databaseModel.firebaseRef.child("orders").child("\(id)").setValue(dictionary) { (error, ref) in
+            print(error)
+        }
+
 
     }
 
@@ -44,9 +72,22 @@ class ItemTuneViewController: UIViewController, UICollectionViewDataSource, UICo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let size = item.sizes[indexPath.item]
+        let isSelected = size.name == variant?.name
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemSizeCollectionViewCell", for: indexPath) as! ItemSizeCollectionViewCell
+
+        cell.selectionView.isHidden = !isSelected
+        cell.itemTitleLabel.text = size.name.uppercased()
+        cell.itemPriceLabel.text = "£\(size.price)"
+
         return cell
     }
 
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let size = item.sizes[indexPath.item]
+        variant = size
+        updateVariant()
+        collectionView.reloadData()
+    }
 }

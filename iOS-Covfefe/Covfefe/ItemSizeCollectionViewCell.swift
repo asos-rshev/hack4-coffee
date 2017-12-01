@@ -9,5 +9,11 @@
 import UIKit
 
 class ItemSizeCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet var selectionView: RoundView!
+    @IBOutlet var itemImageView: UIImageView!
+    @IBOutlet var itemTitleLabel: UILabel!
+    @IBOutlet var itemPriceLabel: UILabel!
     
+
 }
