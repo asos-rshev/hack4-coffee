@@ -42,6 +42,64 @@
             {
               "client_id": "382378711041-0auv3mff8onacsqo85ps21u0a0ch2p66.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "382378711041-a75a6vqjeo6b7u4tj8el6a2rt2o6qqps.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asos.Covfefe"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382378711041:android:54734ffe1d4c5e35",
+        "android_client_info": {
+          "package_name": "com.asos.covfefeshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382378711041-isnk24lk4oufojthenj96hofmb9d8e56.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asos.covfefeshop",
+            "certificate_hash": "3b1fefd5dda3747049e835c266d00108af647dc6"
+          }
+        },
+        {
+          "client_id": "382378711041-0auv3mff8onacsqo85ps21u0a0ch2p66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6XbLRsE6A3oxtgXtOSMKAxXHBsuCgmcs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382378711041-0auv3mff8onacsqo85ps21u0a0ch2p66.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "382378711041-a75a6vqjeo6b7u4tj8el6a2rt2o6qqps.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asos.Covfefe"
+              }
             }
           ]
         },
