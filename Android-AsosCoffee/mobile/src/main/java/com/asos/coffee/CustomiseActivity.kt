@@ -13,14 +13,14 @@ import com.asos.covfefe_common.mapper.CanteenItemSizeNameToIconMapper
 import com.asos.covfefe_common.model.CanteenMenuItem
 import com.asos.covfefe_common.model.CanteenMenuItemSize
 import kotlinx.android.synthetic.main.activity_customise.*
-import kotlinx.android.synthetic.main.canteen_item.view.*
+import kotlinx.android.synthetic.main.size_item.view.*
 
-private const val EXTRA_ITEM:String = "EXTRA_ITEM"
+private const val EXTRA_ITEM: String = "EXTRA_ITEM"
 
 class CustomiseActivity : AppCompatActivity() {
 
     private val item by lazy {
-        val result:CanteenMenuItem = intent.getParcelableExtra(EXTRA_ITEM)
+        val result: CanteenMenuItem = intent.getParcelableExtra(EXTRA_ITEM)
         result
     }
 
@@ -33,12 +33,19 @@ class CustomiseActivity : AppCompatActivity() {
         extrasRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         milkRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        sizesRecyclerView.adapter = SizesAdapter(item.sizes?: emptyList()) {
-            customiseProceedButton.text = getString(R.string.proceed_button_label_format,  it?.price)
-            customizeSummary.text = it?.name
+        val sizesAdapter = SizesAdapter(item.sizes ?: emptyList()) {
+            updateFromSelection(it)
         }
+        item.sizes?.get(0)?.let { sizesAdapter.selectedSize = it }
+        sizesRecyclerView.adapter = sizesAdapter
 
-        customiseProceedButton.text = getString(R.string.proceed_button_label_format,  0f)
+        updateFromSelection(sizesAdapter.selectedSize)
+    }
+
+    private fun updateFromSelection(selectedSize: CanteenMenuItemSize?) {
+        customiseProceedButton.text = getString(R.string.proceed_button_label_format, selectedSize?.price ?: 0.0)
+        customizeSummary.text = selectedSize?.name
+        sizesRecyclerView.adapter.notifyDataSetChanged()
     }
 
     companion object {
@@ -50,7 +57,10 @@ class CustomiseActivity : AppCompatActivity() {
     }
 }
 
-class SizesAdapter(val items: List<CanteenMenuItemSize>, val buttonUpdater:(CanteenMenuItemSize?) -> Unit) : RecyclerView.Adapter<SizesViewHolder>() {
+class SizesAdapter(val items: List<CanteenMenuItemSize>, val buttonUpdater: (CanteenMenuItemSize?) -> Unit) : RecyclerView.Adapter<SizesViewHolder>() {
+
+    var selectedSize: CanteenMenuItemSize? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SizesViewHolder {
         val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.size_item, parent, false)
@@ -61,8 +71,10 @@ class SizesAdapter(val items: List<CanteenMenuItemSize>, val buttonUpdater:(Cant
 
     override fun onBindViewHolder(holder: SizesViewHolder?, position: Int) {
         val size = items[position]
-        holder?.bind(size, View.OnClickListener {
+        holder?.bind(size, selectedSize == size, View.OnClickListener {
+            selectedSize = size
             buttonUpdater.invoke(size)
+            notifyDataSetChanged()
         })
     }
 
@@ -71,10 +83,11 @@ class SizesAdapter(val items: List<CanteenMenuItemSize>, val buttonUpdater:(Cant
 class SizesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val canteenItemSizeNameToIconMapper = CanteenItemSizeNameToIconMapper()
 
-    fun bind(size: CanteenMenuItemSize, clickAction: View.OnClickListener) {
-        itemView.itemIcon.setImageResource(canteenItemSizeNameToIconMapper.iconForSize(size.name))
-        itemView.itemTitle.text = size.name
-        itemView.itemPrice.text = "£${size.price}"
+    fun bind(size: CanteenMenuItemSize, selected: Boolean, clickAction: View.OnClickListener) {
+        itemView.itemSizeIcon.setImageResource(canteenItemSizeNameToIconMapper.iconForSize(size.name))
+        itemView.itemSizeTitle.text = size.name
+        itemView.itemSizePrice.text = "£${size.price}"
+        itemView.customiseSelectedBg?.visibility = if (selected) View.VISIBLE else View.GONE
         itemView.setOnClickListener(clickAction)
     }
 }
