@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		038DB1921681EBC7C05E0D71 /* Pods_CovfefeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25EB47CCE6D367B4800D07 /* Pods_CovfefeTests.framework */; };
+		6EC62BFC1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */; };
 		9720E6BEDA73B8147A9F81EE /* Pods_Covfefe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8913B977DABB3E63BEB279 /* Pods_Covfefe.framework */; };
 		9B27741E1FD03A2400C25FE8 /* FTN36.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27740F1FD03A2400C25FE8 /* FTN36.otf */; };
 		9B27741F1FD03A2400C25FE8 /* FTN35.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774101FD03A2400C25FE8 /* FTN35.otf */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		361021F271ED29BAD551E536 /* Pods-Covfefe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covfefe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe.release.xcconfig"; sourceTree = "<group>"; };
 		55805B4FD0B2A938CFBF1BAE /* Pods-CovfefeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovfefeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CovfefeTests/Pods-CovfefeTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderConfirmationScreen.storyboard; sourceTree = "<group>"; };
 		9B27740F1FD03A2400C25FE8 /* FTN36.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN36.otf; sourceTree = "<group>"; };
 		9B2774101FD03A2400C25FE8 /* FTN35.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN35.otf; sourceTree = "<group>"; };
 		9B2774111FD03A2400C25FE8 /* FTN96.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN96.otf; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				9B2C9FBA1FD0199200E96C12 /* Info.plist */,
 				9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */,
 				9B27740E1FD03A2400C25FE8 /* Fonts */,
+				6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */,
 			);
 			path = Covfefe;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				9B2774271FD03A2400C25FE8 /* FTN86.otf in Resources */,
 				9B2774231FD03A2400C25FE8 /* FTN56.otf in Resources */,
 				9B2774221FD03A2400C25FE8 /* FTN95.otf in Resources */,
+				6EC62BFC1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard in Resources */,
 				9B2774291FD03A2400C25FE8 /* FTN76.otf in Resources */,
 				9B27741E1FD03A2400C25FE8 /* FTN36.otf in Resources */,
 				9B2774211FD03A2400C25FE8 /* FTN55.otf in Resources */,
