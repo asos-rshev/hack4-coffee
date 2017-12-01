@@ -6,33 +6,62 @@
     android:layout_height="match_parent"
     tools:context="com.asos.covfefeshop.MainActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/black"
+        android:drawablePadding="15dp"
+        android:drawableStart="@drawable/ic_logo_navbar"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.06"
+        android:paddingBottom="10dp"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:text="THE CANTEEN"
+        android:textColor="#f8e71c"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/titles_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/titles"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:textSize="14sp"
+            app:tabSelectedTextColor="#f8e71c"
+            app:tabTextColor="#f8e71c" />
+    </FrameLayout>
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-        <android.support.v4.view.PagerTabStrip
-            android:id="@+id/pager_tab_strip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:background="#33b5e5"
-            android:textColor="#fff"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp" />
-    </android.support.v4.view.ViewPager>
+        app:layout_constraintTop_toBottomOf="@+id/titles_container" />
 
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#eeeeee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titles_container" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
