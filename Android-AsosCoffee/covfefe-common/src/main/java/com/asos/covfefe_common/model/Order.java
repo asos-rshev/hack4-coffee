@@ -4,13 +4,13 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Order implements Serializable {
-    public String id;
+    public long id;
 
     public List<Item> items;
 
     public String name;
 
-    public String inProgress;
+    public int inProgress;
 
-    public String totalPrice;
+    public double totalPrice;
 }

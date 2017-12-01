@@ -4,17 +4,17 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Item implements Serializable {
-    public String count;
+    public long count;
 
     public String name;
 
-    public String unitPrice;
+    public double unitPrice;
 
-    public String type;
+    public int type;
 
-    public String milky;
+    public boolean milky;
 
-    public String ready;
+    public boolean ready;
 
     public List<String> extras;
 
