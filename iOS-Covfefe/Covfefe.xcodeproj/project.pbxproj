@@ -8,14 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		038DB1921681EBC7C05E0D71 /* Pods_CovfefeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25EB47CCE6D367B4800D07 /* Pods_CovfefeTests.framework */; };
+		6EC62BFC1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */; };
 		9720E6BEDA73B8147A9F81EE /* Pods_Covfefe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8913B977DABB3E63BEB279 /* Pods_Covfefe.framework */; };
+		9B27741E1FD03A2400C25FE8 /* FTN36.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27740F1FD03A2400C25FE8 /* FTN36.otf */; };
+		9B27741F1FD03A2400C25FE8 /* FTN35.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774101FD03A2400C25FE8 /* FTN35.otf */; };
+		9B2774201FD03A2400C25FE8 /* FTN96.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774111FD03A2400C25FE8 /* FTN96.otf */; };
+		9B2774211FD03A2400C25FE8 /* FTN55.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774121FD03A2400C25FE8 /* FTN55.otf */; };
+		9B2774221FD03A2400C25FE8 /* FTN95.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774131FD03A2400C25FE8 /* FTN95.otf */; };
+		9B2774231FD03A2400C25FE8 /* FTN56.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774141FD03A2400C25FE8 /* FTN56.otf */; };
+		9B2774241FD03A2400C25FE8 /* FTN46.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774151FD03A2400C25FE8 /* FTN46.otf */; };
+		9B2774251FD03A2400C25FE8 /* FTN85.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774161FD03A2400C25FE8 /* FTN85.otf */; };
+		9B2774261FD03A2400C25FE8 /* FTN45.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774171FD03A2400C25FE8 /* FTN45.otf */; };
+		9B2774271FD03A2400C25FE8 /* FTN86.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774181FD03A2400C25FE8 /* FTN86.otf */; };
+		9B2774281FD03A2400C25FE8 /* FTN75.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B2774191FD03A2400C25FE8 /* FTN75.otf */; };
+		9B2774291FD03A2400C25FE8 /* FTN76.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27741A1FD03A2400C25FE8 /* FTN76.otf */; };
+		9B27742A1FD03A2400C25FE8 /* FTN66.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27741B1FD03A2400C25FE8 /* FTN66.otf */; };
+		9B27742B1FD03A2400C25FE8 /* FTN65.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27741C1FD03A2400C25FE8 /* FTN65.otf */; };
+		9B27742C1FD03A2400C25FE8 /* FuturaStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B27741D1FD03A2400C25FE8 /* FuturaStd.otf */; };
+		9B2774391FD0445700C25FE8 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2774381FD0445700C25FE8 /* LaunchViewController.swift */; };
+		9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27743A1FD04DF500C25FE8 /* Singleton.swift */; };
+		9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */; };
 		9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */; };
-		9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB01FD0199200E96C12 /* ViewController.swift */; };
 		9B2C9FB41FD0199200E96C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB21FD0199200E96C12 /* Main.storyboard */; };
 		9B2C9FB61FD0199200E96C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB51FD0199200E96C12 /* Assets.xcassets */; };
 		9B2C9FB91FD0199200E96C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FB71FD0199200E96C12 /* LaunchScreen.storyboard */; };
 		9B2C9FC41FD0199200E96C12 /* CovfefeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FC31FD0199200E96C12 /* CovfefeTests.swift */; };
 		9B2C9FCF1FD02A5600E96C12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */; };
+		9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2C9FD01FD037B900E96C12 /* Style.swift */; };
+		9BBE9DC91FD1642F00E937C6 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DC81FD1642F00E937C6 /* ItemCollectionViewCell.swift */; };
+		9BBE9DCB1FD16A2400E937C6 /* ItemTuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DCA1FD16A2400E937C6 /* ItemTuneViewController.swift */; };
+		9BBE9DCD1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DCC1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift */; };
+		9BBE9DCF1FD179A100E937C6 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DCE1FD179A100E937C6 /* RoundView.swift */; };
+		9BBE9DD11FD1857100E937C6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DD01FD1857100E937C6 /* OrderConfirmationViewController.swift */; };
+		9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */; };
+		9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */; };
+		9BFB315E1FD07E6E00EEA552 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */; };
+		9BFB31601FD07F5000EEA552 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315F1FD07F5000EEA552 /* ItemsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +59,27 @@
 /* Begin PBXFileReference section */
 		361021F271ED29BAD551E536 /* Pods-Covfefe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covfefe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe.release.xcconfig"; sourceTree = "<group>"; };
 		55805B4FD0B2A938CFBF1BAE /* Pods-CovfefeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovfefeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CovfefeTests/Pods-CovfefeTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderConfirmationScreen.storyboard; sourceTree = "<group>"; };
+		9B27740F1FD03A2400C25FE8 /* FTN36.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN36.otf; sourceTree = "<group>"; };
+		9B2774101FD03A2400C25FE8 /* FTN35.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN35.otf; sourceTree = "<group>"; };
+		9B2774111FD03A2400C25FE8 /* FTN96.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN96.otf; sourceTree = "<group>"; };
+		9B2774121FD03A2400C25FE8 /* FTN55.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN55.otf; sourceTree = "<group>"; };
+		9B2774131FD03A2400C25FE8 /* FTN95.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN95.otf; sourceTree = "<group>"; };
+		9B2774141FD03A2400C25FE8 /* FTN56.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN56.otf; sourceTree = "<group>"; };
+		9B2774151FD03A2400C25FE8 /* FTN46.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN46.otf; sourceTree = "<group>"; };
+		9B2774161FD03A2400C25FE8 /* FTN85.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN85.otf; sourceTree = "<group>"; };
+		9B2774171FD03A2400C25FE8 /* FTN45.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN45.otf; sourceTree = "<group>"; };
+		9B2774181FD03A2400C25FE8 /* FTN86.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN86.otf; sourceTree = "<group>"; };
+		9B2774191FD03A2400C25FE8 /* FTN75.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN75.otf; sourceTree = "<group>"; };
+		9B27741A1FD03A2400C25FE8 /* FTN76.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN76.otf; sourceTree = "<group>"; };
+		9B27741B1FD03A2400C25FE8 /* FTN66.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN66.otf; sourceTree = "<group>"; };
+		9B27741C1FD03A2400C25FE8 /* FTN65.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FTN65.otf; sourceTree = "<group>"; };
+		9B27741D1FD03A2400C25FE8 /* FuturaStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaStd.otf; sourceTree = "<group>"; };
+		9B2774381FD0445700C25FE8 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		9B27743A1FD04DF500C25FE8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		9B2C9FAB1FD0199200E96C12 /* Covfefe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covfefe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B2C9FB01FD0199200E96C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B2C9FB31FD0199200E96C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B2C9FB51FD0199200E96C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B2C9FB81FD0199200E96C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +88,16 @@
 		9B2C9FC31FD0199200E96C12 /* CovfefeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovfefeTests.swift; sourceTree = "<group>"; };
 		9B2C9FC51FD0199200E96C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B2C9FD01FD037B900E96C12 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		9BBE9DC81FD1642F00E937C6 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BBE9DCA1FD16A2400E937C6 /* ItemTuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTuneViewController.swift; sourceTree = "<group>"; };
+		9BBE9DCC1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSizeCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BBE9DCE1FD179A100E937C6 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		9BBE9DD01FD1857100E937C6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
+		9BFB315F1FD07F5000EEA552 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
 		B4130C45C2C0BC29F8605E01 /* Pods-CovfefeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovfefeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CovfefeTests/Pods-CovfefeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBAD528F5952A342EEC24E8F /* Pods-Covfefe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covfefe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe.debug.xcconfig"; sourceTree = "<group>"; };
 		CE25EB47CCE6D367B4800D07 /* Pods_CovfefeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovfefeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +124,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B27740E1FD03A2400C25FE8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9B27740F1FD03A2400C25FE8 /* FTN36.otf */,
+				9B2774101FD03A2400C25FE8 /* FTN35.otf */,
+				9B2774111FD03A2400C25FE8 /* FTN96.otf */,
+				9B2774121FD03A2400C25FE8 /* FTN55.otf */,
+				9B2774131FD03A2400C25FE8 /* FTN95.otf */,
+				9B2774141FD03A2400C25FE8 /* FTN56.otf */,
+				9B2774151FD03A2400C25FE8 /* FTN46.otf */,
+				9B2774161FD03A2400C25FE8 /* FTN85.otf */,
+				9B2774171FD03A2400C25FE8 /* FTN45.otf */,
+				9B2774181FD03A2400C25FE8 /* FTN86.otf */,
+				9B2774191FD03A2400C25FE8 /* FTN75.otf */,
+				9B27741A1FD03A2400C25FE8 /* FTN76.otf */,
+				9B27741B1FD03A2400C25FE8 /* FTN66.otf */,
+				9B27741C1FD03A2400C25FE8 /* FTN65.otf */,
+				9B27741D1FD03A2400C25FE8 /* FuturaStd.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		9B2C9FA21FD0199200E96C12 = {
 			isa = PBXGroup;
 			children = (
@@ -93,12 +171,26 @@
 			isa = PBXGroup;
 			children = (
 				9B2C9FAE1FD0199200E96C12 /* AppDelegate.swift */,
-				9B2C9FB01FD0199200E96C12 /* ViewController.swift */,
+				9B27743A1FD04DF500C25FE8 /* Singleton.swift */,
+				9B27743C1FD04E3C00C25FE8 /* DatabaseModel.swift */,
+				9B2C9FD01FD037B900E96C12 /* Style.swift */,
+				9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */,
 				9B2C9FB21FD0199200E96C12 /* Main.storyboard */,
+				9B2774381FD0445700C25FE8 /* LaunchViewController.swift */,
+				9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */,
+				9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */,
+				9BFB315F1FD07F5000EEA552 /* ItemsListViewController.swift */,
+				9BBE9DC81FD1642F00E937C6 /* ItemCollectionViewCell.swift */,
+				9BBE9DCA1FD16A2400E937C6 /* ItemTuneViewController.swift */,
+				9BBE9DCC1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift */,
+				9BBE9DCE1FD179A100E937C6 /* RoundView.swift */,
 				9B2C9FB51FD0199200E96C12 /* Assets.xcassets */,
 				9B2C9FB71FD0199200E96C12 /* LaunchScreen.storyboard */,
 				9B2C9FBA1FD0199200E96C12 /* Info.plist */,
 				9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */,
+				9B27740E1FD03A2400C25FE8 /* Fonts */,
+				6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */,
+				9BBE9DD01FD1857100E937C6 /* OrderConfirmationViewController.swift */,
 			);
 			path = Covfefe;
 			sourceTree = "<group>";
@@ -222,8 +314,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B2C9FB91FD0199200E96C12 /* LaunchScreen.storyboard in Resources */,
+				9B27742B1FD03A2400C25FE8 /* FTN65.otf in Resources */,
+				9B2774251FD03A2400C25FE8 /* FTN85.otf in Resources */,
+				9B2774271FD03A2400C25FE8 /* FTN86.otf in Resources */,
+				9B2774231FD03A2400C25FE8 /* FTN56.otf in Resources */,
+				9B2774221FD03A2400C25FE8 /* FTN95.otf in Resources */,
+				6EC62BFC1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard in Resources */,
+				9B2774291FD03A2400C25FE8 /* FTN76.otf in Resources */,
+				9B27741E1FD03A2400C25FE8 /* FTN36.otf in Resources */,
+				9B2774211FD03A2400C25FE8 /* FTN55.otf in Resources */,
 				9B2C9FCF1FD02A5600E96C12 /* GoogleService-Info.plist in Resources */,
+				9B2774241FD03A2400C25FE8 /* FTN46.otf in Resources */,
+				9B27742A1FD03A2400C25FE8 /* FTN66.otf in Resources */,
+				9B2774261FD03A2400C25FE8 /* FTN45.otf in Resources */,
+				9B2774201FD03A2400C25FE8 /* FTN96.otf in Resources */,
+				9B27742C1FD03A2400C25FE8 /* FuturaStd.otf in Resources */,
 				9B2C9FB61FD0199200E96C12 /* Assets.xcassets in Resources */,
+				9B27741F1FD03A2400C25FE8 /* FTN35.otf in Resources */,
+				9B2774281FD03A2400C25FE8 /* FTN75.otf in Resources */,
 				9B2C9FB41FD0199200E96C12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +367,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -275,14 +388,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Covfefe/Pods-Covfefe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,8 +467,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B2C9FB11FD0199200E96C12 /* ViewController.swift in Sources */,
+				9BBE9DCB1FD16A2400E937C6 /* ItemTuneViewController.swift in Sources */,
+				9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */,
+				9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */,
+				9BFB315E1FD07E6E00EEA552 /* Storyboard+Extensions.swift in Sources */,
+				9BBE9DD11FD1857100E937C6 /* OrderConfirmationViewController.swift in Sources */,
 				9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */,
+				9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */,
+				9BBE9DC91FD1642F00E937C6 /* ItemCollectionViewCell.swift in Sources */,
+				9BFB31601FD07F5000EEA552 /* ItemsListViewController.swift in Sources */,
+				9BBE9DCD1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift in Sources */,
+				9B27743B1FD04DF500C25FE8 /* Singleton.swift in Sources */,
+				9BBE9DCF1FD179A100E937C6 /* RoundView.swift in Sources */,
+				9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */,
+				9B2774391FD0445700C25FE8 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
