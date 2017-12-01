@@ -62,7 +62,7 @@
     <Button
         android:id="@+id/customiseProceedButton"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="64dp"
         android:gravity="center"
         android:layout_marginTop="16dp"
         android:textStyle="bold"
@@ -71,7 +71,7 @@
         android:paddingStart="0dp"
         android:paddingEnd="0dp"
         android:paddingBottom="0dp"
-        android:background="@color/colorAccent"
+        android:backgroundTint="@color/colorAccent"
         android:text="PROCEED (total: £1.25)"
         />
 </LinearLayout>

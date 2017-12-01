@@ -13,10 +13,11 @@ class CanteenItemTypeToIconMapper {
 }
 class CanteenItemSizeNameToIconMapper {
     @DrawableRes
-    fun iconForSize(sizeName:String?):Int = when(sizeName) {
-        "Small" -> R.drawable.ic_latte_small
-        "Medium" -> R.drawable.ic_latte_medium
-        "Large" -> R.drawable.ic_latte_large
+    fun iconForSize(sizeName:String?):Int = when(sizeName?.toLowerCase()) {
+        "small", "single" -> R.drawable.ic_latte_small
+        "regular", "double" -> R.drawable.ic_latte_medium
+        "large" -> R.drawable.ic_latte_large
+        "" -> R.drawable.ic_food
         else -> R.drawable.ic_drinks
     }
 }
