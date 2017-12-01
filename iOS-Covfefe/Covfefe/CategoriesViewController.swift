@@ -31,7 +31,7 @@ final class CategoriesViewController: UIViewController {
 
     private func pushItemsListViewController(category: Int) {
         let itemsListViewController = storyboard!._itemsList
-        itemsListViewController.selectedCategory = category
+        itemsListViewController.selectedCategory = Singleton.shared.databaseModel.menu[category]
         navigationController?.pushViewController(itemsListViewController, animated: true)
     }
 }

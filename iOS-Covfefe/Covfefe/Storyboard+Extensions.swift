@@ -17,4 +17,8 @@ extension UIStoryboard {
     var _itemsList: ItemsListViewController {
         return instantiateViewController(withIdentifier: "ItemsListViewController") as! ItemsListViewController
     }
+
+    var _itemTune: ItemTuneViewController {
+        return instantiateViewController(withIdentifier: "ItemTuneViewController") as! ItemTuneViewController
+    }
 }
