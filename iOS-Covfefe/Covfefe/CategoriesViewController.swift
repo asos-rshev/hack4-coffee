@@ -25,6 +25,8 @@ final class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         firstCategoryLabel.text = Singleton.shared.databaseModel.menu[0].name
         secondCategoryLabel.text = Singleton.shared.databaseModel.menu[1].name
+
+        navigationItem.titleView = MainNavigationController.logoImageView
     }
 
     private func pushItemsListViewController(category: Int) {

@@ -14,4 +14,21 @@ final class MainNavigationController: UINavigationController {
         return .lightContent
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigationBar.tintColor = .canteenYellow
+    }
+
+    static var logoImageView: UIImageView {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "LOGO"))
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }
+
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewController.navigationItem.titleView = MainNavigationController.logoImageView
+
+        super.pushViewController(viewController, animated: animated)
+    }
 }

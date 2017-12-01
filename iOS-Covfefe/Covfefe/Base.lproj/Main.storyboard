@@ -25,22 +25,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dH-UcL">
-                                <rect key="frame" x="163" y="216.5" width="48" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-dH-UcL">
+                                <rect key="frame" x="125" y="204.5" width="124" height="72"/>
                                 <color key="tintColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="CQy-Q5-1kL"/>
-                                    <constraint firstAttribute="height" constant="48" id="Muy-0B-mgs"/>
+                                    <constraint firstAttribute="width" constant="124" id="CQy-Q5-1kL"/>
+                                    <constraint firstAttribute="height" constant="72" id="Muy-0B-mgs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE CANTEEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-Q1-OGj">
-                                <rect key="frame" x="100" y="276.5" width="175.5" height="35"/>
+                                <rect key="frame" x="92.5" y="288.5" width="190.5" height="33"/>
                                 <fontDescription key="fontDescription" name="FuturaPTHeavy-Reg" family="Futura PT" pointSize="28"/>
                                 <color key="textColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-ri-uR9">
-                                <rect key="frame" x="169" y="352" width="37" height="37"/>
+                                <rect key="frame" x="169" y="362" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,6 +76,10 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jh-fV-xmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" id="W2w-wD-qWR">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="111" y="133"/>
         </scene>
@@ -94,7 +98,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHK-tv-37a">
-                                                <rect key="frame" x="-0.5" y="93" width="375" height="114"/>
+                                                <rect key="frame" x="-0.5" y="94" width="375" height="112"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drinks" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-PA-smr">
                                                         <rect key="frame" x="157.5" y="0.0" width="60" height="60"/>
@@ -104,7 +108,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRINKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-vJ-fRH">
-                                                        <rect key="frame" x="144.5" y="84" width="86.5" height="30"/>
+                                                        <rect key="frame" x="143.5" y="84" width="88.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="FuturaPTHeavy-Reg" family="Futura PT" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -142,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="302" width="375" height="301"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5j-fX-p5L">
-                                                <rect key="frame" x="0.0" y="93.5" width="375" height="114"/>
+                                                <rect key="frame" x="0.0" y="94.5" width="375" height="112"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="L9J-TL-XmO">
                                                         <rect key="frame" x="157.5" y="0.0" width="60" height="60"/>
@@ -152,7 +156,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOOD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRl-Hx-5TN">
-                                                        <rect key="frame" x="154" y="84" width="67" height="30"/>
+                                                        <rect key="frame" x="154.5" y="84" width="67.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="FuturaPTHeavy-Reg" family="Futura PT" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -233,7 +237,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IconTemplate" width="83" height="83"/>
+        <image name="LOGO" width="124" height="72"/>
         <image name="drinks" width="60" height="60"/>
         <image name="food" width="60" height="60"/>
     </resources>
