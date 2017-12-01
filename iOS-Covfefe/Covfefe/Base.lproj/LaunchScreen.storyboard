@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconTemplate" translatesAutoresizingMaskIntoConstraints="NO" id="Rum-Yc-dGJ">
-                                <rect key="frame" x="163" y="216.5" width="48" height="48"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="Rum-Yc-dGJ">
+                                <rect key="frame" x="125" y="204.5" width="124" height="72"/>
                                 <color key="tintColor" red="0.97254901960784312" green="0.90588235294117647" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="VHI-gl-3OG"/>
-                                    <constraint firstAttribute="width" constant="48" id="ZX6-VF-1Af"/>
+                                    <constraint firstAttribute="height" constant="72" id="VHI-gl-3OG"/>
+                                    <constraint firstAttribute="width" constant="124" id="ZX6-VF-1Af"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IconTemplate" width="83" height="83"/>
+        <image name="LOGO" width="124" height="72"/>
     </resources>
 </document>

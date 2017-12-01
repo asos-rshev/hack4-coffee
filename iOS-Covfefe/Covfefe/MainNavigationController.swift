@@ -28,6 +28,7 @@ final class MainNavigationController: UINavigationController {
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.navigationItem.titleView = MainNavigationController.logoImageView
+        viewController.navigationItem.title = " "
 
         super.pushViewController(viewController, animated: animated)
     }
