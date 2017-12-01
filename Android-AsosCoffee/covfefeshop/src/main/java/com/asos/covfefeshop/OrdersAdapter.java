@@ -46,7 +46,7 @@ class OrdersAdapter extends FirebaseRecyclerAdapter<Order, OrdersAdapter.OrderVi
 
         void setOrder(Order order) {
             this.order = order;
-            orderName.setText(order.name);
+            orderName.setText(order.getName());
         }
 
         @Override

@@ -7,15 +7,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.asos.covfefe_common.model.Item;
+import com.asos.covfefe_common.model.OrderItem;
 
 import java.util.List;
 
 class OrderItemsAdapter extends RecyclerView.Adapter<OrderItemsAdapter.OrderItemVH> {
-    private final List<Item> items;
+    private final List<OrderItem> items;
     private final LayoutInflater inflater;
 
-    OrderItemsAdapter(List<Item> items, LayoutInflater inflater) {
+    OrderItemsAdapter(List<OrderItem> items, LayoutInflater inflater) {
         this.items = items;
         this.inflater = inflater;
     }
@@ -50,10 +50,10 @@ class OrderItemsAdapter extends RecyclerView.Adapter<OrderItemsAdapter.OrderItem
             extras = itemView.findViewById(R.id.item_extras);
         }
 
-        void bind(Item item) {
-            type.setText(item.name);
-            extras.setText(getExtrasAsString(item.extras));
-            count.setText(String.valueOf(item.count));
+        void bind(OrderItem item) {
+            type.setText(item.getName());
+            extras.setText(getExtrasAsString(item.getExtras()));
+            count.setText(String.valueOf(item.getCount()));
         }
 
         private String getExtrasAsString(List<String> extras) {

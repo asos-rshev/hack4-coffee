@@ -54,14 +54,14 @@ class CustomiseActivity : AppCompatActivity() {
                 name = FirebaseAuth.getInstance().currentUser?.displayName?:"Unknown"
                 totalPrice = calculateTotalPrice()
                 items = listOf(
-                        Item().apply {
+                        OrderItem().apply {
                             count = 1
-                            extras = selectedExtra?.let { mutableListOf(it.name) }?: mutableListOf()
+                            extras = selectedExtra?.name?.let { listOf(it) }?: emptyList()
                             milky = item.milky
                             name = item.name
                             size = selectedSize?.name
                             type = 0
-                            unitPrice = totalPrice
+                            unitPrice = calculateTotalPrice()
                         }
                 )
             }

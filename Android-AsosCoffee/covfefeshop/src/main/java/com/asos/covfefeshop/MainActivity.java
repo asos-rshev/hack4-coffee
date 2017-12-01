@@ -179,7 +179,7 @@ public class MainActivity extends FragmentActivity {
         public static OrderDetails newInstance(Order order) {
             OrderDetails fragment = new OrderDetails();
             Bundle args = new Bundle();
-            args.putSerializable("ORDER", order);
+            args.putParcelable("ORDER", order);
             fragment.setArguments(args);
             return fragment;
         }
@@ -189,15 +189,15 @@ public class MainActivity extends FragmentActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_order_details, container, false);
             Bundle args = getArguments();
-            Order currentOrder = (Order) args.getSerializable("ORDER");
+            Order currentOrder = args.getParcelable("ORDER");
             if (currentOrder != null) {
                 RecyclerView listOfItems = rootView.findViewById(R.id.order_items);
                 listOfItems.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-                listOfItems.setAdapter(new OrderItemsAdapter(currentOrder.items, inflater));
+                listOfItems.setAdapter(new OrderItemsAdapter(currentOrder.getItems(), inflater));
                 TextView name = rootView.findViewById(R.id.customer_name);
-                name.setText(currentOrder.name);
+                name.setText(currentOrder.getName());
                 counter = rootView.findViewById(R.id.counter);
-                minutes = currentOrder.items.size();
+                minutes = currentOrder.getItems().size();
                 updateCounter();
                 button = rootView.findViewById(R.id.textView6);
                 button.setOnClickListener(this);
