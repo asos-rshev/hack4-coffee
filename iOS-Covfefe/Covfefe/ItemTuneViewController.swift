@@ -60,11 +60,20 @@ class ItemTuneViewController: UIViewController, UICollectionViewDataSource, UICo
             "totalPrice": variant!.price
         ]
 
-        Singleton.shared.databaseModel.firebaseRef.child("orders").child("\(id)").setValue(dictionary) { (error, ref) in
-            print(error)
+        Singleton.shared.databaseModel.firebaseRef.child("orders").child("\(id)").setValue(dictionary) { [weak self] (error, ref) in
+
+            if let error = error {
+                let alertVC = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Mkay", style: .cancel, handler: { (_) in
+                    self?.navigationController?.popToRootViewController(animated: true)
+                })
+                alertVC.addAction(okAction)
+                self?.present(alertVC, animated: true, completion: nil)
+            } else {
+                let vc = UIStoryboard(name: "OrderConfirmationScreen", bundle: nil).instantiateInitialViewController()!
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
         }
-
-
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

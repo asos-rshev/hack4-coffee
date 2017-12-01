@@ -39,6 +39,7 @@
 		9BBE9DCB1FD16A2400E937C6 /* ItemTuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DCA1FD16A2400E937C6 /* ItemTuneViewController.swift */; };
 		9BBE9DCD1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DCC1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift */; };
 		9BBE9DCF1FD179A100E937C6 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DCE1FD179A100E937C6 /* RoundView.swift */; };
+		9BBE9DD11FD1857100E937C6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE9DD01FD1857100E937C6 /* OrderConfirmationViewController.swift */; };
 		9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */; };
 		9BFB315C1FD0775B00EEA552 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */; };
 		9BFB315E1FD07E6E00EEA552 /* Storyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */; };
@@ -92,6 +93,7 @@
 		9BBE9DCA1FD16A2400E937C6 /* ItemTuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTuneViewController.swift; sourceTree = "<group>"; };
 		9BBE9DCC1FD1712500E937C6 /* ItemSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BBE9DCE1FD179A100E937C6 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		9BBE9DD01FD1857100E937C6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		9BFB31591FD0771E00EEA552 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		9BFB315B1FD0775B00EEA552 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		9BFB315D1FD07E6E00EEA552 /* Storyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extensions.swift"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				9B2C9FCE1FD02A5600E96C12 /* GoogleService-Info.plist */,
 				9B27740E1FD03A2400C25FE8 /* Fonts */,
 				6EC62BFB1FD15D8400E842A4 /* OrderConfirmationScreen.storyboard */,
+				9BBE9DD01FD1857100E937C6 /* OrderConfirmationViewController.swift */,
 			);
 			path = Covfefe;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				9B27743D1FD04E3C00C25FE8 /* DatabaseModel.swift in Sources */,
 				9B2C9FD11FD037B900E96C12 /* Style.swift in Sources */,
 				9BFB315E1FD07E6E00EEA552 /* Storyboard+Extensions.swift in Sources */,
+				9BBE9DD11FD1857100E937C6 /* OrderConfirmationViewController.swift in Sources */,
 				9B2C9FAF1FD0199200E96C12 /* AppDelegate.swift in Sources */,
 				9BFB315A1FD0771E00EEA552 /* MainNavigationController.swift in Sources */,
 				9BBE9DC91FD1642F00E937C6 /* ItemCollectionViewCell.swift in Sources */,
