@@ -10,11 +10,12 @@
 
     <View
         android:id="@+id/itemMilkSelectedBg"
-        android:visibility="gone"
-        android:padding="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       android:background="@drawable/circular_selection" />
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circular_selection" />
 
     <ImageView
         android:id="@+id/itemMilkIcon"

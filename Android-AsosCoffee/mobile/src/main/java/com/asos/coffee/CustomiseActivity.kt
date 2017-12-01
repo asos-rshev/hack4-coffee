@@ -109,7 +109,6 @@ class CustomiseActivity : AppCompatActivity() {
                 selectedMilk = it
                 updateFromSelection()
             }
-//            milkAdapter.selectedMilk =
             milkRecyclerView.adapter = milkAdapter
         }
     }
@@ -173,9 +172,9 @@ class SizesAdapter(val items: List<CanteenMenuItemSize>, val buttonUpdater: (Can
     }
 }
 
-class MilkAdapter(private var options:FirebaseRecyclerOptions<CanteenMenuItemMilk>, private val buttonUpdater: (CanteenMenuItemMilk?) -> Unit) :FirebaseRecyclerAdapter<CanteenMenuItemMilk, MilkViewHolder>(options) {
+class MilkAdapter(options:FirebaseRecyclerOptions<CanteenMenuItemMilk>, private val buttonUpdater: (CanteenMenuItemMilk?) -> Unit) :FirebaseRecyclerAdapter<CanteenMenuItemMilk, MilkViewHolder>(options) {
 
-    var selectedMilk: CanteenMenuItemMilk? = if (itemCount > 0) getItem(0) else null
+    var selectedMilk: CanteenMenuItemMilk? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MilkViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -184,7 +183,7 @@ class MilkAdapter(private var options:FirebaseRecyclerOptions<CanteenMenuItemMil
     }
 
     override fun onBindViewHolder(holder: MilkViewHolder?, position: Int, model: CanteenMenuItemMilk) {
-        holder?.bind(model, selectedMilk == model, View.OnClickListener {
+        holder?.bind(model, selectedMilk == model || (selectedMilk == null && position == 0), View.OnClickListener {
             selectedMilk = model
             buttonUpdater.invoke(model)
             notifyDataSetChanged()
